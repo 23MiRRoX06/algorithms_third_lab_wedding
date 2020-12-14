@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'package:algorithms_third_lab_wedding/graph.dart';
+import 'package:algorithms_third_lab_wedding/graph_utils/graph.dart';
 
 List<dynamic> readValuesFromTxt(String filePath) {
   var fileLines = File(filePath).readAsLinesSync();
@@ -16,9 +15,7 @@ List<dynamic> readValuesFromTxt(String filePath) {
   return <dynamic>[vertexNumber, edgesMap];
 }
 
-Graph createGraphFromValues() {
-  print('Please, eneter full path for your test case');
-  var filePath = stdin.readLineSync();
+Graph createGraphFromValues(String filePath) {
   var fileValues = readValuesFromTxt(filePath);
   var graph = Graph(fileValues[0] + 1);
   var edgesToAdd = fileValues[1];

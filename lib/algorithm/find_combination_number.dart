@@ -1,4 +1,4 @@
-void calculateNumberOfPairCombinations(List<List<int>> tribes) {
+int calculateNumberOfPairCombinations(List<List<int>> tribes) {
   var numberOfpairCombinations = 0;
   var girlsByTribes = <List<int>>[];
   var boysByTribes = <List<int>>[];
@@ -17,5 +17,5 @@ void calculateNumberOfPairCombinations(List<List<int>> tribes) {
     });
     numberOfpairCombinations += tribeBoys.length * numberOfGirlsCanPairWith;
   });
-  print(numberOfpairCombinations);
+  return numberOfpairCombinations;
 }
